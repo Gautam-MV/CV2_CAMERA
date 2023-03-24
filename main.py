@@ -27,7 +27,7 @@ class MainApp(MDApp):
         ret, frame = self.capture.read()
         # frame initialize
         self.image_frame = frame
-        buffer = cv2.flip(frame, 0).tostring()
+        buffer = cv2.flip(frame, 0).tobytes()
         texture = Texture.create(size=(frame.shape[1], frame.shape[0]), colorfmt = "bgr")
         texture.blit_buffer(buffer, colorfmt="bgr", bufferfmt="ubyte")
         self.image.texture = texture
