@@ -6,8 +6,6 @@ from kivy.graphics.texture import Texture
 from kivy.clock import Clock
 import cv2
 
-
-
 class MainApp(MDApp):
 
     def build(self):
